@@ -11,15 +11,15 @@ $(document).ready(function(){
             $('.site_close a img').attr('src','img/close_gray.png');
 
               //sitemap의 세로 아코디언 메뉴
-            $('.site_nav>ul>li>a').click(function(){
+            $('.sitemap .site_nav>ul>li>a').click(function(){
                 if($(this).attr('class')!='active'){
-                    $('.site_nav .sub').stop().slideUp();
+                    $('.site_nav .sub').slideUp();
                     $('.site_nav>ul>li>a').removeClass('active');
-                    $(this).next().stop().slideDown();
+                    $(this).next().slideDown();
                     $(this).addClass('active');
                 }else{
                     $(this).removeClass('active');
-                    $(this).next().stop().slideUp();
+                    $(this).next().slideUp();
                 }
             });
 
@@ -160,7 +160,7 @@ $(document).ready(function(){
             //   }
             
             },
-          480:{
+          360:{
              slidesPerView: 1.5,   //가로길이 480~767px픽셀 이상
             }
         }
